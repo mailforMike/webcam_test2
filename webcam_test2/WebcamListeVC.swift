@@ -11,14 +11,34 @@ import Alamofire
 import SwiftyJSON
 import SDWebImage
 
-class WebcamListeVC: UIViewController {
+class WebcamListeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+   
+    
 
     var webcams = [webcam]()
+    
+    @IBOutlet weak var webcamTabelle: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        webcamTabelle.delegate = self
+        webcamTabelle.dataSource = self
+        
         getWebcams(lat: "48.219623", long: "16.354551")
+        
+    }
+    
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return webcams.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "webcamZelle", for: indexPath) as! ListeTableViewCell
+            cell.updateZelle(webcam: webcams[indexPath.row])
+            return cell
         
     }
     
@@ -57,7 +77,7 @@ class WebcamListeVC: UIViewController {
                 //print(" \(nummer): \(we.titel) \(we.country)")
             }
             
-            
+            self.webcamTabelle.reloadData()
             print("Dateneinlesen Fertig")
             
         }
