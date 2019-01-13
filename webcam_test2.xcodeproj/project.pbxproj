@@ -11,6 +11,7 @@
 		4C23E61021EB5DD5003A1B2A /* ListeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C23E60F21EB5DD5003A1B2A /* ListeTableViewCell.swift */; };
 		4C23E61221EB64E0003A1B2A /* fullscreenSimpleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C23E61121EB64E0003A1B2A /* fullscreenSimpleVC.swift */; };
 		4C23E61421EB6AB3003A1B2A /* fullscreenSliderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C23E61321EB6AB3003A1B2A /* fullscreenSliderVC.swift */; };
+		4C23E61921EB6BD9003A1B2A /* FullscreenCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C23E61821EB6BD9003A1B2A /* FullscreenCollectionViewCell.swift */; };
 		4C8A973621EB4F5D007BBE54 /* datenstruktur.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8A973521EB4F5D007BBE54 /* datenstruktur.swift */; };
 		4CFFD99A21EB4E7D001D8C30 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFFD99921EB4E7D001D8C30 /* AppDelegate.swift */; };
 		4CFFD99C21EB4E7D001D8C30 /* WebcamListeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFFD99B21EB4E7D001D8C30 /* WebcamListeVC.swift */; };
@@ -24,6 +25,7 @@
 		4C23E60F21EB5DD5003A1B2A /* ListeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListeTableViewCell.swift; sourceTree = "<group>"; };
 		4C23E61121EB64E0003A1B2A /* fullscreenSimpleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fullscreenSimpleVC.swift; sourceTree = "<group>"; };
 		4C23E61321EB6AB3003A1B2A /* fullscreenSliderVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fullscreenSliderVC.swift; sourceTree = "<group>"; };
+		4C23E61821EB6BD9003A1B2A /* FullscreenCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullscreenCollectionViewCell.swift; sourceTree = "<group>"; };
 		4C8A973521EB4F5D007BBE54 /* datenstruktur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = datenstruktur.swift; sourceTree = "<group>"; };
 		4CFFD99621EB4E7D001D8C30 /* webcam_test2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = webcam_test2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CFFD99921EB4E7D001D8C30 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 		4C23E61621EB6B17003A1B2A /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				4C23E61821EB6BD9003A1B2A /* FullscreenCollectionViewCell.swift */,
 				4C23E60F21EB5DD5003A1B2A /* ListeTableViewCell.swift */,
 			);
 			path = Views;
@@ -243,6 +246,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C23E61221EB64E0003A1B2A /* fullscreenSimpleVC.swift in Sources */,
+				4C23E61921EB6BD9003A1B2A /* FullscreenCollectionViewCell.swift in Sources */,
 				4C8A973621EB4F5D007BBE54 /* datenstruktur.swift in Sources */,
 				4CFFD99C21EB4E7D001D8C30 /* WebcamListeVC.swift in Sources */,
 				4CFFD99A21EB4E7D001D8C30 /* AppDelegate.swift in Sources */,

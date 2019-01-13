@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -134,9 +135,56 @@
                     <view key="view" contentMode="scaleToFill" id="neb-eP-oY7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" pagingEnabled="YES" bouncesZoom="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="icW-sg-TTD">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="jaX-sB-srj">
+                                    <size key="itemSize" width="375" height="647"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="fullscreenCell" id="uBd-E2-3eB" customClass="FullscreenCollectionViewCell" customModule="webcam_test2" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QiU-sX-kdn">
+                                                    <rect key="frame" x="8" y="8" width="359" height="631"/>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="QiU-sX-kdn" firstAttribute="top" secondItem="uBd-E2-3eB" secondAttribute="topMargin" id="0ac-wZ-AXa"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="QiU-sX-kdn" secondAttribute="bottom" id="a8B-bA-s67"/>
+                                            <constraint firstItem="QiU-sX-kdn" firstAttribute="leading" secondItem="uBd-E2-3eB" secondAttribute="leadingMargin" id="hOe-Z6-s1o"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="QiU-sX-kdn" secondAttribute="trailing" id="rYu-qk-PEV"/>
+                                        </constraints>
+                                        <size key="customSize" width="375" height="647"/>
+                                        <connections>
+                                            <outlet property="bild" destination="QiU-sX-kdn" id="Vb8-aN-Mxf"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="icW-sg-TTD" firstAttribute="leading" secondItem="hSv-dK-Uh3" secondAttribute="leading" id="DVX-0s-J3V"/>
+                            <constraint firstItem="hSv-dK-Uh3" firstAttribute="bottom" secondItem="icW-sg-TTD" secondAttribute="bottom" id="Hfc-2f-XZ8"/>
+                            <constraint firstAttribute="trailing" secondItem="icW-sg-TTD" secondAttribute="trailing" id="gc4-Vg-CfT"/>
+                            <constraint firstItem="icW-sg-TTD" firstAttribute="top" secondItem="hSv-dK-Uh3" secondAttribute="top" id="jyc-xP-2Q4"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="hSv-dK-Uh3"/>
                     </view>
+                    <connections>
+                        <outlet property="anzeige" destination="icW-sg-TTD" id="Vki-9I-Dyl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FxO-8D-yu5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

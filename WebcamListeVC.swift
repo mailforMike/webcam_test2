@@ -43,13 +43,19 @@ class WebcamListeVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //print("selektiert: \(indexPath.row)")
-        performSegue(withIdentifier: "goToFullScreenSimple", sender: webcams[indexPath.row])
+        
+        //performSegue(withIdentifier: "goToFullScreenSimple", sender: webcams[indexPath.row])
+        performSegue(withIdentifier: "goToFullScreenSlider", sender: indexPath.row)
+
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let fullscreenSimpleVC = segue.destination as? fullscreenSimpleVC {
             fullscreenSimpleVC.webcam = sender as! webcam
+        }
+        if let fullscreenSliderVC = segue.destination as? fullscreenSliderVC {
+            fullscreenSliderVC.webcams = webcams
+            fullscreenSliderVC.selected = sender as! Int
         }
     }
     

@@ -8,28 +8,39 @@
 
 import UIKit
 
-class fullscreenSliderVC: UIViewController {
+class fullscreenSliderVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+    
+    var webcams = [webcam]()
+    var selected : Int?
 
+    @IBOutlet weak var anzeige: UICollectionView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        anzeige.delegate=self
+        anzeige.dataSource=self
+        
+        let t = IndexPath(row: selected!, section: 0)
+        
+        anzeige.scrollToItem(at: t, at: UICollectionViewScrollPosition.centeredHorizontally, animated: true)
 
         // Do any additional setup after loading the view.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return webcams.count
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "fullscreenCell", for: indexPath) as! FullscreenCollectionViewCell
+        
+        cell.updateAnzeige(webcam: webcams[indexPath.row])
+        
+        return cell
     }
-    */
+
+    
 
 }
