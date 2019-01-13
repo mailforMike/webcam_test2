@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        getWebcams(lat: "12", long: "23")
+        getWebcams(lat: "48.219623", long: "16.354551")
         
     }
 
@@ -27,13 +27,17 @@ class ViewController: UIViewController {
     
     func getWebcams(lat:String,long:String){
         
-        var webcams = [webcam]()
+       
         
         let key = "085793e1e7msh6c027f963532522p1cc723jsncdd554b19694"
-        let limit = "40"
-        let country = "at"
+        let limit = "50"
         
-        let url = "https://webcamstravel.p.rapidapi.com/webcams/list/country=\(country)/limit=\(limit)"
+        
+       
+        
+        let radius = "200" //kilometer
+        
+        let url = "https://webcamstravel.p.rapidapi.com/webcams/list/limit=\(limit)/nearby=\(lat),\(long),\(radius)/orderby=distance,asc"
         
         let parameters : [String:String] = [
             "show" : "webcams:image,location",
@@ -45,11 +49,18 @@ class ViewController: UIViewController {
         
         Alamofire.request(url, method: .get, parameters: parameters, headers:headers).responseJSON { (ergebniss) in
             let json = JSON(ergebniss.result.value!) // <— swifty json
-            
+            var webcams = [webcam]()
+            //print(json)
             for (nummer,inhalt) in json["result"]["webcams"] {
-                let we = webcam(titel: inhalt["title"].stringValue, url: inhalt["image"]["current"]["preview"].stringValue)
-                self.webcams.append(we)
-                //print(" \(nummer): \(we.titel)")
+                let we = webcam(titel: inhalt["title"].stringValue,
+                                url: inhalt["image"]["current"]["preview"].stringValue,
+                                lat: inhalt["location"]["latitude"].stringValue,
+                                long: inhalt["location"]["longitude"].stringValue,
+                                id: inhalt["id"].stringValue,
+                                country: inhalt["location"]["country"].stringValue
+                                )
+                webcams.append(we)
+                print(" \(nummer): \(we.titel) \(we.country)")
             }
             
             print("Fertig")

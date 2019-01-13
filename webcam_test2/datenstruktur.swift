@@ -15,13 +15,15 @@ struct webcam {
     let lat : String
     let long : String
     let id: String
+    let country: String
     
-    init(titel:String,url:String,lat:String,long:String,id:String){
+    init(titel:String,url:String,lat:String,long:String,id:String,country:String){
         self.titel = titel
         self.bild_url = url
         self.lat = lat
         self.long = long
         self.id = id
+        self.country = country
     }
     
 }
