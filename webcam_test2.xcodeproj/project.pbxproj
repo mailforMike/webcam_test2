@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		32E916984E647A06AF21B9F2 /* Pods_webcam_test2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B25CBD6802BF764BB54250FC /* Pods_webcam_test2.framework */; };
+		4C8A973621EB4F5D007BBE54 /* datenstruktur.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8A973521EB4F5D007BBE54 /* datenstruktur.swift */; };
 		4CFFD99A21EB4E7D001D8C30 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFFD99921EB4E7D001D8C30 /* AppDelegate.swift */; };
 		4CFFD99C21EB4E7D001D8C30 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFFD99B21EB4E7D001D8C30 /* ViewController.swift */; };
 		4CFFD99F21EB4E7D001D8C30 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CFFD99D21EB4E7D001D8C30 /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 
 /* Begin PBXFileReference section */
 		32C92F7D3AE6F689DAE28CD7 /* Pods-webcam_test2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-webcam_test2.debug.xcconfig"; path = "Pods/Target Support Files/Pods-webcam_test2/Pods-webcam_test2.debug.xcconfig"; sourceTree = "<group>"; };
+		4C8A973521EB4F5D007BBE54 /* datenstruktur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = datenstruktur.swift; sourceTree = "<group>"; };
 		4CFFD99621EB4E7D001D8C30 /* webcam_test2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = webcam_test2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CFFD99921EB4E7D001D8C30 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4CFFD99B21EB4E7D001D8C30 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 				4CFFD9A021EB4E7D001D8C30 /* Assets.xcassets */,
 				4CFFD9A221EB4E7D001D8C30 /* LaunchScreen.storyboard */,
 				4CFFD9A521EB4E7D001D8C30 /* Info.plist */,
+				4C8A973521EB4F5D007BBE54 /* datenstruktur.swift */,
 			);
 			path = webcam_test2;
 			sourceTree = "<group>";
@@ -99,6 +102,7 @@
 				4CFFD99221EB4E7D001D8C30 /* Sources */,
 				4CFFD99321EB4E7D001D8C30 /* Frameworks */,
 				4CFFD99421EB4E7D001D8C30 /* Resources */,
+				40BE2D3A800BCC54FED67885 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -157,6 +161,28 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		40BE2D3A800BCC54FED67885 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-webcam_test2/Pods-webcam_test2-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-webcam_test2/Pods-webcam_test2-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		C79D676FAE4C13E76F47A3D8 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -182,6 +208,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C8A973621EB4F5D007BBE54 /* datenstruktur.swift in Sources */,
 				4CFFD99C21EB4E7D001D8C30 /* ViewController.swift in Sources */,
 				4CFFD99A21EB4E7D001D8C30 /* AppDelegate.swift in Sources */,
 			);
