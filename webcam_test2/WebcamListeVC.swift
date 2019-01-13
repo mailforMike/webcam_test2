@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  WebcamListeVC.swift
 //  webcam_test2
 //
 //  Created by Michael Holzinger on 13.01.19.
@@ -11,23 +11,16 @@ import Alamofire
 import SwiftyJSON
 import SDWebImage
 
-class ViewController: UIViewController {
+class WebcamListeVC: UIViewController {
 
+    var webcams = [webcam]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         getWebcams(lat: "48.219623", long: "16.354551")
         
     }
-
-   
-    
-    
-    
-    
-    
-    
-    
     
     
     
@@ -50,7 +43,7 @@ class ViewController: UIViewController {
         
         Alamofire.request(url, method: .get, parameters: parameters, headers:headers).responseJSON { (ergebniss) in
             let json = JSON(ergebniss.result.value!) // <— swifty json
-            var webcams = [webcam]()
+            
             //print(json)
             for (nummer,inhalt) in json["result"]["webcams"] {
                 let we = webcam(titel: inhalt["title"].stringValue,
@@ -59,8 +52,8 @@ class ViewController: UIViewController {
                                 long: inhalt["location"]["longitude"].stringValue,
                                 id: inhalt["id"].stringValue,
                                 country: inhalt["location"]["country"].stringValue
-                                )
-                webcams.append(we)
+                )
+                self.webcams.append(we)
                 //print(" \(nummer): \(we.titel) \(we.country)")
             }
             
@@ -70,7 +63,6 @@ class ViewController: UIViewController {
         }
         
     }
-
 
 }
 

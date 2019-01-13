@@ -10,7 +10,7 @@
 		32E916984E647A06AF21B9F2 /* Pods_webcam_test2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B25CBD6802BF764BB54250FC /* Pods_webcam_test2.framework */; };
 		4C8A973621EB4F5D007BBE54 /* datenstruktur.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8A973521EB4F5D007BBE54 /* datenstruktur.swift */; };
 		4CFFD99A21EB4E7D001D8C30 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFFD99921EB4E7D001D8C30 /* AppDelegate.swift */; };
-		4CFFD99C21EB4E7D001D8C30 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFFD99B21EB4E7D001D8C30 /* ViewController.swift */; };
+		4CFFD99C21EB4E7D001D8C30 /* WebcamListeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFFD99B21EB4E7D001D8C30 /* WebcamListeVC.swift */; };
 		4CFFD99F21EB4E7D001D8C30 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CFFD99D21EB4E7D001D8C30 /* Main.storyboard */; };
 		4CFFD9A121EB4E7D001D8C30 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CFFD9A021EB4E7D001D8C30 /* Assets.xcassets */; };
 		4CFFD9A421EB4E7D001D8C30 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CFFD9A221EB4E7D001D8C30 /* LaunchScreen.storyboard */; };
@@ -21,7 +21,7 @@
 		4C8A973521EB4F5D007BBE54 /* datenstruktur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = datenstruktur.swift; sourceTree = "<group>"; };
 		4CFFD99621EB4E7D001D8C30 /* webcam_test2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = webcam_test2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CFFD99921EB4E7D001D8C30 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4CFFD99B21EB4E7D001D8C30 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4CFFD99B21EB4E7D001D8C30 /* WebcamListeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebcamListeVC.swift; sourceTree = "<group>"; };
 		4CFFD99E21EB4E7D001D8C30 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4CFFD9A021EB4E7D001D8C30 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4CFFD9A321EB4E7D001D8C30 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -64,7 +64,7 @@
 			isa = PBXGroup;
 			children = (
 				4CFFD99921EB4E7D001D8C30 /* AppDelegate.swift */,
-				4CFFD99B21EB4E7D001D8C30 /* ViewController.swift */,
+				4CFFD99B21EB4E7D001D8C30 /* WebcamListeVC.swift */,
 				4CFFD99D21EB4E7D001D8C30 /* Main.storyboard */,
 				4CFFD9A021EB4E7D001D8C30 /* Assets.xcassets */,
 				4CFFD9A221EB4E7D001D8C30 /* LaunchScreen.storyboard */,
@@ -209,7 +209,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C8A973621EB4F5D007BBE54 /* datenstruktur.swift in Sources */,
-				4CFFD99C21EB4E7D001D8C30 /* ViewController.swift in Sources */,
+				4CFFD99C21EB4E7D001D8C30 /* WebcamListeVC.swift in Sources */,
 				4CFFD99A21EB4E7D001D8C30 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
