@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Webcam ListeVC-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="WebcamListeVC" customModule="webcam_test2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="110" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ecb-ca-kaL">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="webcamZelle" rowHeight="110" id="9kR-m6-Txc" customClass="ListeTableViewCell" customModule="webcam_test2" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="110"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9kR-m6-Txc" id="ghF-B1-GyM">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="109.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bJ6-og-TrW">
+                                                    <rect key="frame" x="0.0" y="0.0" width="200" height="109.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="200" id="2A7-pB-3ga"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yW4-Je-gz1">
+                                                    <rect key="frame" x="205" y="5" width="165" height="99.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="yW4-Je-gz1" firstAttribute="leading" secondItem="bJ6-og-TrW" secondAttribute="trailing" constant="5" id="7h9-y9-47g"/>
+                                                <constraint firstAttribute="trailing" secondItem="yW4-Je-gz1" secondAttribute="trailing" constant="5" id="B0j-A6-zGw"/>
+                                                <constraint firstItem="yW4-Je-gz1" firstAttribute="top" secondItem="ghF-B1-GyM" secondAttribute="top" constant="5" id="MKf-y7-SXa"/>
+                                                <constraint firstItem="bJ6-og-TrW" firstAttribute="leading" secondItem="ghF-B1-GyM" secondAttribute="leading" id="agq-mS-Zz4"/>
+                                                <constraint firstAttribute="bottom" secondItem="bJ6-og-TrW" secondAttribute="bottom" id="g5W-cP-pbx"/>
+                                                <constraint firstAttribute="bottom" secondItem="yW4-Je-gz1" secondAttribute="bottom" constant="5" id="gdP-gM-tgv"/>
+                                                <constraint firstItem="bJ6-og-TrW" firstAttribute="top" secondItem="ghF-B1-GyM" secondAttribute="top" id="y9c-m3-aXn"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="bild" destination="bJ6-og-TrW" id="J3m-gz-fdY"/>
+                                            <outlet property="textfeld" destination="yW4-Je-gz1" id="Y8l-jh-RgO"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ecb-ca-kaL" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="3S7-9R-6Zq"/>
+                            <constraint firstItem="ecb-ca-kaL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="btP-t5-NR8"/>
+                            <constraint firstItem="ecb-ca-kaL" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="e9E-lX-psA"/>
+                            <constraint firstItem="ecb-ca-kaL" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="j5r-64-K6e"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="webcamTabelle" destination="ecb-ca-kaL" id="PTF-5h-igA"/>
+                        <segue destination="UPb-xd-UoN" kind="show" identifier="goToFullScreenSimple" id="3y9-O4-pNP"/>
+                        <segue destination="o8R-2s-6nA" kind="show" identifier="goToFullScreenSlider" id="fbC-s7-eIu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-321" y="448"/>
+        </scene>
+        <!--Fullscreen SimpleVC-->
+        <scene sceneID="L74-x5-1ou">
+            <objects>
+                <viewController id="UPb-xd-UoN" customClass="fullscreenSimpleVC" customModule="webcam_test2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ixz-gH-ajN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="e1K-wO-mhL">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aR6-VL-W3k">
+                                <rect key="frame" x="15" y="40" width="345" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aIg-EE-xxb">
+                                <rect key="frame" x="170.5" y="607" width="34" height="30"/>
+                                <state key="normal" title="back"/>
+                                <connections>
+                                    <action selector="zurück_pressed:" destination="UPb-xd-UoN" eventType="touchUpInside" id="BdF-7G-1uz"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="zEz-Xa-Djn" firstAttribute="trailing" secondItem="aR6-VL-W3k" secondAttribute="trailing" constant="15" id="E8e-Cn-lvD"/>
+                            <constraint firstItem="e1K-wO-mhL" firstAttribute="trailing" secondItem="zEz-Xa-Djn" secondAttribute="trailing" id="W5v-H1-GfY"/>
+                            <constraint firstItem="e1K-wO-mhL" firstAttribute="top" secondItem="zEz-Xa-Djn" secondAttribute="top" id="Yek-H3-qV0"/>
+                            <constraint firstItem="aIg-EE-xxb" firstAttribute="centerX" secondItem="ixz-gH-ajN" secondAttribute="centerX" id="bPj-Uz-8qh"/>
+                            <constraint firstItem="aR6-VL-W3k" firstAttribute="leading" secondItem="zEz-Xa-Djn" secondAttribute="leading" constant="15" id="cHx-nF-nhv"/>
+                            <constraint firstItem="e1K-wO-mhL" firstAttribute="leading" secondItem="zEz-Xa-Djn" secondAttribute="leading" id="oBc-3S-AF4"/>
+                            <constraint firstItem="zEz-Xa-Djn" firstAttribute="bottom" secondItem="e1K-wO-mhL" secondAttribute="bottom" id="poT-jV-aY9"/>
+                            <constraint firstItem="aR6-VL-W3k" firstAttribute="top" secondItem="zEz-Xa-Djn" secondAttribute="top" constant="20" id="szA-Ic-IbQ"/>
+                            <constraint firstItem="zEz-Xa-Djn" firstAttribute="bottom" secondItem="aIg-EE-xxb" secondAttribute="bottom" constant="30" id="uCW-Fe-sRy"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="zEz-Xa-Djn"/>
+                    </view>
+                    <connections>
+                        <outlet property="bild" destination="e1K-wO-mhL" id="4kg-cc-4G7"/>
+                        <outlet property="textfeld" destination="aR6-VL-W3k" id="GVA-G7-Ytt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cWu-mk-Dqy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="917.60000000000002" y="109.29535232383809"/>
+        </scene>
+        <!--Fullscreen SliderVC-->
+        <scene sceneID="uaY-We-bpO">
+            <objects>
+                <viewController id="o8R-2s-6nA" customClass="fullscreenSliderVC" customModule="webcam_test2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="neb-eP-oY7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="hSv-dK-Uh3"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FxO-8D-yu5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="916" y="790"/>
+        </scene>
+    </scenes>
+</document>
