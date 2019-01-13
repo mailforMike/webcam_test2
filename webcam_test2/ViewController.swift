@@ -20,20 +20,21 @@ class ViewController: UIViewController {
         
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+   
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     func getWebcams(lat:String,long:String){
         
-       
-        
         let key = "085793e1e7msh6c027f963532522p1cc723jsncdd554b19694"
         let limit = "50"
-        
-        
-       
         
         let radius = "200" //kilometer
         
@@ -60,10 +61,11 @@ class ViewController: UIViewController {
                                 country: inhalt["location"]["country"].stringValue
                                 )
                 webcams.append(we)
-                print(" \(nummer): \(we.titel) \(we.country)")
+                //print(" \(nummer): \(we.titel) \(we.country)")
             }
             
-            print("Fertig")
+            
+            print("Dateneinlesen Fertig")
             
         }
         
